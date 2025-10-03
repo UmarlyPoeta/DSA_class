@@ -10,23 +10,25 @@ struct punkt{
 };
 
 double odl(int x1, int y1, int x2, int y2) {
-	return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2);
+	return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
 }
 
 
-punkt naj_oddalona(int n, int m, char [][]tab, punkt k) {
+
+
+punkt naj_oddalona(int n, int m, char tab[][100], punkt k) {
 	double d = 0;
 	double nd = 0;
-	punkt odp;
+	punkt odp = { -1, -1 };
 
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < m; j++) {
-			if (tab[n][m] == 'k' && k.x != n && k.y != m) {
-				nd = odl(k.x, k.y, n, m);
+			if (tab[i][j] == 'k' && (k.x != i || k.y != j)) {
+				nd = odl(k.x, k.y, i, j);
 				if (nd > d) {
 					d = nd;
-					odp.x = n;
-					odp.y = m;
+					odp.x = i;
+					odp.y = j;
 				}
 			}
 		}
@@ -37,7 +39,12 @@ punkt naj_oddalona(int n, int m, char [][]tab, punkt k) {
 
 int main() {
 	int n, m;
+	cin >> n >> m;
 	char tab[n][m];
 
-	
+	for (int i = 0; i < n; i++)
+	    for (int j = 0; j < m; j++)
+	        cin >> tab[i][j];
+
+	return 0;
 }
