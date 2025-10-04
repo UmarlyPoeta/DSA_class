@@ -14,9 +14,7 @@ double odl(int x1, int y1, int x2, int y2) {
 }
 
 
-
-
-punkt naj_oddalona(int n, int m, char tab[][100], punkt k) {
+punkt naj_oddalona(int n, int m, char** tab, punkt k) {
 	double d = 0;
 	double nd = 0;
 	punkt odp = { -1, -1 };
