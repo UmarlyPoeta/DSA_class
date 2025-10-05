@@ -28,7 +28,15 @@ char najSasiedow(int n, int m, vector<vector<char>>& tab, int k, vector<char>& c
             }
         }
     }
-
+    char res = col[0];
+    int max_count = colors[res];
+    for (int i = 1; i < k; i++) {
+        if (colors[col[i]] > max_count) {
+            max_count = colors[col[i]];
+            res = col[i];
+        }
+    }
+    return res;
 }
 
 int main(){

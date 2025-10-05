@@ -67,7 +67,7 @@ int main(){
         tab[i] = new char[m];
         for (int j = 0; j < m; ++j) {
             cin >> tab[i][j];
-        }
+        }q
     }
     punkt p;
     cin >> p.x >> p.y;
