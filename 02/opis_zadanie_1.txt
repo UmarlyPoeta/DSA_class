@@ -1,0 +1,29 @@
+Opis kodu w pliku zadanie_1.cpp
+
+Program zadanie_1.cpp jest napisany w języku C++ i służy do zarządzania listą prezydentów Stanów Zjednoczonych. Wykorzystuje strukturę danych listy jednokierunkowej do przechowywania informacji o prezydentach, takich jak imię, nazwisko, lata kadencji oraz przynależność partyjna. Kod realizuje kilka zadań związanych z przetwarzaniem danych o prezydentach, wczytywanych z pliku tekstowego.
+
+Struktura danych:
+- Struktura Node: Reprezentuje pojedynczego prezydenta. Zawiera pola: imie (string), nazwisko (string), rozp_kad (int - rok rozpoczęcia kadencji), kon_kad (int - rok zakończenia kadencji), partia (string) oraz wskaźnik next do następnego węzła.
+- Klasa List: Implementuje listę jednokierunkową. Posiada prywatne pole head (wskaźnik na początek listy). Konstruktor inicjalizuje head na nullptr, a destruktor zwalnia pamięć wszystkich węzłów.
+
+Metody klasy List:
+- insert: Dodaje nowego prezydenta do listy w sposób posortowany rosnąco według roku rozpoczęcia kadencji (rozp_kad). Tworzy nowy węzeł i wstawia go w odpowiednie miejsce.
+- print: Wyświetla wszystkich prezydentów w liście w formacie: imię nazwisko (rok_rozpoczęcia-rok_zakończenia) partia.
+- find_by_shortest_kadencja: Znajduje prezydenta z najkrótszą kadencją (obliczaną jako różnica kon_kad - rozp_kad) i wyświetla jego dane.
+- print_nodes_from_certain_partia: Wyświetla wszystkich prezydentów należących do podanej partii politycznej.
+- which_president_from_year: Dla podanego roku sprawdza, który prezydent był u władzy (kadencja obejmuje ten rok) i wyświetla jego dane. Jeśli nie znajdzie, wyświetla komunikat o braku.
+
+Funkcje pomocnicze:
+- split: Funkcja dzieląca string na części względem separatora (np. spacji). Zwraca tablicę stringów (maksymalnie 5 elementów). Używana do parsowania linii z pliku.
+- loadData: Wczytuje dane z pliku tekstowego (presidents.txt). Każda linia zawiera dane prezydenta oddzielone spacjami. Funkcja parsuje imię, nazwisko, lata kadencji (w formacie rok-rok) i partię, obsługując przypadki z 4 lub 5 elementami (np. dwuczłonowe imię). Dodaje każdego prezydenta do listy za pomocą insert.
+
+Funkcja main:
+- Deklaruje globalną instancję listy presidents.
+- Wywołuje loadData z ścieżką "presidents.txt".
+- Zadanie 1: Wyświetla wszystkich prezydentów (print).
+- Zadanie 2: Znajduje i wyświetla prezydenta z najkrótszą kadencją (find_by_shortest_kadencja).
+- Zadanie 3: Pobiera od użytkownika nazwę partii i wyświetla prezydentów z tej partii (print_nodes_from_certain_partia).
+- Zadanie 4: Pobiera od użytkownika rok i wyświetla prezydenta sprawującego urząd w tym roku (which_president_from_year).
+- Komentarz do zadania 5: Sugeruje optymalizacje, takie jak użycie hash mapy lub tablicy wskaźników dla szybszego dostępu, jeśli zależy na pamięci lub wydajności.
+
+Kod wykorzystuje standardowe biblioteki C++: iostream dla wejścia/wyjścia, string dla obsługi tekstu, fstream dla plików. Zarządzanie pamięcią odbywa się ręcznie (new/delete), co wymaga uwagi na unikanie wycieków. Lista jest sortowana przy wstawianiu, co ułatwia wyszukiwania liniowe.
