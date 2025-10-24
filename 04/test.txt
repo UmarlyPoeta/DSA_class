@@ -1,0 +1,77 @@
+=== QUEUE TESTS ===
+test_basic_operations passed
+test_fifo_order passed
+test_empty_queue passed
+test_many_clients passed
+
+=== PRIORITY QUEUE TESTS ===
+test_priority_queue_basic passed
+test_priority_queue_order passed
+test_priority_queue_empty passed
+
+=== ROUND ROBIN TESTS ===
+test_round_robin_simple passed
+Rozpoczynam symulacje Round Robin (kwant czasu: 5)
+Czas 0: Proces 1 (pozostaly czas: 5) - ZAKONCZONY
+Czas 5: Proces 2 (pozostaly czas: 10) - kontynuuje
+Czas 10: Proces 3 (pozostaly czas: 5) - ZAKONCZONY
+Czas 15: Proces 2 (pozostaly czas: 5) - ZAKONCZONY
+Symulacja zakonczona. Calkowity czas: 20
+test_round_robin_exact_quantum passed
+Rozpoczynam symulacje Round Robin (kwant czasu: 4)
+Czas 0: Proces 1 (pozostaly czas: 10) - kontynuuje
+Czas 4: Proces 1 (pozostaly czas: 6) - kontynuuje
+Czas 8: Proces 1 (pozostaly czas: 2) - ZAKONCZONY
+Symulacja zakonczona. Calkowity czas: 10
+test_round_robin_single_process passed
+
+=== DOUBLE SIDED QUEUE TESTS ===
+Zadanie 'Task1' (priorytet: 1) dodane na poczatek
+Zadanie 'Task2' (priorytet: 2) dodane na poczatek
+Zadanie 'Task3' (priorytet: 3) dodane na poczatek
+test_deque_add_front passed
+Zadanie 'Task1' (priorytet: 1) dodane na koniec
+Zadanie 'Task2' (priorytet: 2) dodane na koniec
+Zadanie 'Task3' (priorytet: 3) dodane na koniec
+test_deque_add_rear passed
+Zadanie 'Task1' (priorytet: 1) dodane na koniec
+Zadanie 'Task2' (priorytet: 2) dodane na koniec
+Obsluzono zadanie z poczatku: 'Task1' (priorytet: 1)
+Obsluzono zadanie z poczatku: 'Task2' (priorytet: 2)
+test_deque_remove_front passed
+Zadanie 'Task1' (priorytet: 1) dodane na koniec
+Zadanie 'Task2' (priorytet: 2) dodane na koniec
+Zadanie 'Task3' (priorytet: 3) dodane na koniec
+Obsluzono zadanie z konca: 'Task3' (priorytet: 3)
+test_deque_remove_rear passed
+Zadanie 'High' (priorytet: 10) dodane na poczatek
+Zadanie 'Low' (priorytet: 1) dodane na koniec
+Zadanie 'VeryHigh' (priorytet: 15) dodane na poczatek
+Zadania w kolejce: [VeryHigh, P:15] [High, P:10] [Low, P:1] 
+Obsluzono zadanie z poczatku: 'VeryHigh' (priorytet: 15)
+Obsluzono zadanie z konca: 'Low' (priorytet: 1)
+test_deque_mixed_operations passed
+test_deque_empty_operations passed
+
+=== ELEVATOR SYSTEM TESTS ===
+Dodano zadanie w gore do pietra 5
+Dodano zadanie w gore do pietra 3
+Dodano zadanie w gore do pietra 8
+
+Rozpoczynanie symulacji windy...
+Winda startuje z pietra 0
+Winda jedzie w gore: 0 -> 5
+Winda jedzie w gore: 5 -> 3
+Winda jedzie w gore: 3 -> 8
+Winda osiagnela najwyzsze pietro lub brak dalszych zadan w gore
+Symulacja zakonczona. Winda zatrzymala sie na pietrze 8
+test_elevator_basic passed
+Dodano zadanie w gore do pietra 3
+Dodano zadanie w gore do pietra 5
+Dodano zadanie w gore do pietra 2
+
+Rozpoczynanie symulacji windy...
+Winda startuje z pietra 0
+Winda jedzie w gore: 0 -> 3
+Winda jedzie w gore: 3 -> 5
+Winda osiagnela najwyzsze pietro lub brak dalszych zadan w gore
