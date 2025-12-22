@@ -1,0 +1,21 @@
+
+=== Array size: 1000 ===
+Bubble Sort, Size: 1000, Time: 19.563 ms, Comparisons: 499500, Swaps: 250982
+Insertion Sort, Size: 1000, Time: 6.478 ms, Comparisons: 251977, Swaps: 250982
+Selection Sort, Size: 1000, Time: 6.728 ms, Comparisons: 499500, Swaps: 992
+Comb Sort, Size: 1000, Time: 0.641 ms, Comparisons: 21710, Swaps: 4409
+Shell Sort, Size: 1000, Time: 0.680 ms, Comparisons: 15142, Swaps: 7642
+
+=== Array size: 5000 ===
+Bubble Sort, Size: 5000, Time: 215.369 ms, Comparisons: 12497500, Swaps: 6196338
+Insertion Sort, Size: 5000, Time: 37.423 ms, Comparisons: 6201332, Swaps: 6196338
+Selection Sort, Size: 5000, Time: 57.713 ms, Comparisons: 12497500, Swaps: 4991
+Comb Sort, Size: 5000, Time: 1.719 ms, Comparisons: 148381, Swaps: 28550
+Shell Sort, Size: 5000, Time: 1.808 ms, Comparisons: 111996, Swaps: 59543
+
+=== Array size: 10000 ===
+Bubble Sort, Size: 10000, Time: 628.050 ms, Comparisons: 49995000, Swaps: 25213929
+Insertion Sort, Size: 10000, Time: 138.764 ms, Comparisons: 25223920, Swaps: 25213929
+Selection Sort, Size: 10000, Time: 194.820 ms, Comparisons: 49995000, Swaps: 9986
+Comb Sort, Size: 10000, Time: 2.949 ms, Comparisons: 336733, Swaps: 63256
+Shell Sort, Size: 10000, Time: 3.002 ms, Comparisons: 269246, Swaps: 154283
