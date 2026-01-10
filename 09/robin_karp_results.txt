@@ -1,0 +1,12 @@
+the,0,1194
+hobbit,0,1067
+Gandalf,1,445
+Bilbo,1,747
+krasnolud,0,1276
+Pagórek,0,1054
+norę,0,1058
+drzwi,0,1262
+fajkę,0,998
+śpiewały,0,2088
+złoto,0,921
+przygody,0,887
